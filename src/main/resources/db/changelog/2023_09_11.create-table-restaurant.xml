@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="utf-8"?>
+<databaseChangeLog
+        xmlns="http://www.liquibase.org/xml/ns/dbchangelog"
+        xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+        xsi:schemaLocation="http://www.liquibase.org/xml/ns/dbchangelog http://www.liquibase.org/xml/ns/dbchangelog/dbchangelog-3.0.xsd">
+
+    <changeSet id="2023_09_11.create-table-restaurant" author="fturgunov">
+        <sql>
+            CREATE TABLE restaurant
+            (
+            id SERIAL NOT NULL,
+            name VARCHAR(255) NOT NULL,
+            city VARCHAR(255),
+            estimated_cost INTEGER,
+            average_rating VARCHAR(25),
+            votes INTEGER,
+            CONSTRAINT pk_restaurant PRIMARY KEY (id)
+            );
+        </sql>
+    </changeSet>
+</databaseChangeLog>
