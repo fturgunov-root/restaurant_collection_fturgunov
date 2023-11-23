@@ -47,3 +47,6 @@ logging:
     org.springframework: WARN
     com.amazonaws.services.simpleemail: DEBUG
 
+nspcredentials:
+  login: ${NSP_LOGIN:login}
+  password: ${NSP_PASSWORD:pass}
